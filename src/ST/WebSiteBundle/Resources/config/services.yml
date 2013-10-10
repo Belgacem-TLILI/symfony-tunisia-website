@@ -1,0 +1,6 @@
+services:
+    stwebsitebundle.default_locale_listener:
+        class: ST\WebSiteBundle\EventListener\DefaultLocaleListener
+        tags:
+          - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+        arguments: [%defaultlocale%]

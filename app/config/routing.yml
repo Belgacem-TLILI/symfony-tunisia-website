@@ -1,3 +1,7 @@
+st_web_site:
+    resource: "@STWebSiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # KunstmaanMediaBundle
 _imagine:
     resource: .

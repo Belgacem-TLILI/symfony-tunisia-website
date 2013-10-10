@@ -1,0 +1,5 @@
+stwebsitebundle_default:
+    resource: "@STWebSiteBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /
+
