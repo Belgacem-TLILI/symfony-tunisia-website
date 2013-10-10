@@ -5,7 +5,7 @@ Welcome to Symfony tunisia community
 
 This document contains information on how to download, install, and start using the website  Symfony tunisia community.
 
-1) Installing the Ksite
+1) Installing the website Symfony tunisia community
 ----------------------------------------------------
 
 If you don't have Composer yet, download it following the instructions on http://getcomposer.org/ or just run the following command:
