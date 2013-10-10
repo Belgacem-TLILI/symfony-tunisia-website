@@ -43,7 +43,7 @@ Create the database and fill it using the fixtures
     app/console doctrine:fixtures:load
 
 
-4) Browsing the CMS administration pages
+4) Browsing the WebSite administration pages
 ----------------------------------------
 
 Congratulations! You're now ready to use the Kunstmaan Bundles CMS. Browse to:
