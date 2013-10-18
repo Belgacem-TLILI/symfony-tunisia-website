@@ -18,10 +18,10 @@
     <link rel="shortcut icon" href="{{ asset('bundles/stcms/favicon.ico') }}" type="image/x-icon">
 
     <!-- css -->
-    {% include 'STCmsBundle:Layout:_css.html.twig' %}
+    {% include 'STWebSiteBundle:Layout:_css.html.twig' %}
 
     <!-- js -->
-    {% include 'STCmsBundle:Layout:_js_header.html.twig' %}
+    {% include 'STWebSiteBundle:Layout:_js_header.html.twig' %}
 </head>
 <body {% block extra_body_attributes %}{% endblock %}>
 {% block header %}
@@ -67,6 +67,6 @@
 	      </div>
 	    </div>
 	{% endblock %}
-	{% include 'STCmsBundle:Layout:_js_footer.html.twig' %}
+	{% include 'STWebSiteBundle:Layout:_js_footer.html.twig' %}
 </body>
 </html>
