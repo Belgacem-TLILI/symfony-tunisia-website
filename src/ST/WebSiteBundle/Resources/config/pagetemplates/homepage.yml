@@ -1,7 +1,5 @@
 name: "Home page"
 rows:
     - regions:
-        - { name: "left_column", span: 4 }
-        - { name: "middle_column", span: 4 }
-        - { name: "right_column", span: 4 }
+        - { name: "main", span: 12 }
 template: "STWebSiteBundle::Pages\\HomePage\\pagetemplate.html.twig"

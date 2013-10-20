@@ -46,7 +46,10 @@ class HomePage extends AbstractPage  implements HasPageTemplateInterface
      */
     public function getPagePartAdminConfigurations()
     {
-        return array('STWebSiteBundle:middle-column', 'STWebSiteBundle:left-column', 'STWebSiteBundle:right-column');
+        return array(
+            "STWebSiteBundle:main",
+            "STWebSiteBundle:footer",
+        );
     }
 
     /**
@@ -62,6 +65,6 @@ class HomePage extends AbstractPage  implements HasPageTemplateInterface
      */
     public function getDefaultView()
     {
-        return 'STWebSiteBundle:Pages\HomePage:view.html.twig';
+        return 'STWebSiteBundle:Pages:index.html.twig';
     }
 }

@@ -18,7 +18,6 @@ use Kunstmaan\NodeBundle\Helper\Services\PageCreatorService;
 use Kunstmaan\PagePartBundle\Helper\Services\PagePartCreatorService;
 use Kunstmaan\TranslatorBundle\Entity\Translation;
 
-use ST\WebSiteBundle\Entity\Pages\ContentPage;
 use ST\WebSiteBundle\Entity\Pages\HomePage;
 
 /**
@@ -70,12 +69,11 @@ class DefaultSiteFixtures extends AbstractFixture implements OrderedFixtureInter
 
         $this->createTranslations();
         $this->createHomePage();
-        $this->createContentPages();
         $this->createDashboard();
     }
 
     /**
-     * Create the dashboard
+     * Create the dashboardSponsorPage
      */
     private function createDashboard()
     {
@@ -117,63 +115,8 @@ class DefaultSiteFixtures extends AbstractFixture implements OrderedFixtureInter
         );
 
         $this->pageCreator->createPage($homePage, $translations, $options);
-
-        $pageparts = array();
-        $pageparts['left_column'][] = $this->pagePartCreator->getCreatorArgumentsForPagePartAndProperties('Kunstmaan\PagePartBundle\Entity\HeaderPagePart',
-            array(
-                'setTitle' => 'First column heading',
-                'setNiv'   => 1
-            )
-        );
     }
     
-    /**
-     * Create a ContentPage
-     */
-    private function createContentPages()
-    {
-    	$nodeRepo = $this->manager->getRepository('KunstmaanNodeBundle:Node');
-    	$homePage = $nodeRepo->findOneBy(array('internalName' => 'homepage'));
-    	$aboutPage = new AboutPage();
-    	$speakersPage = new SpeakersPage();
-    	$sponsorPage = new SponsorPage();
-    	
-    	$this->setContentPages('About Us', $aboutPage, $homePage);
-    	$this->setContentPages('Speakers', $speakersPage,$homePage);
-    	$this->setContentPages('Sponsor', $sponsorPage,$homePage);
-    
-    }
-    
-    
-    private function setContentPages($name,$newPage,$homePage)
-    {
-    	$contentPage = $newPage;
-    	$contentPage->setTitle($name);
-    	$this->namePage = $name;
-    	$translations = array();
-    	$translations[] = array('language' => 'en', 'callback' => function($page, $translation, $seo) {
-    		$translation->setTitle($this->namePage);
-    		$translation->setSlug($this->namePage);
-    		$translation->setWeight(20);
-    	});
-    	$translations[] = array('language' => 'fr', 'callback' => function($page, $translation, $seo) {
-    		$translation->setTitle($this->namePage);
-    		$translation->setSlug($this->namePage);
-    		$translation->setWeight(20);
-    	});
-    		 
-    		$options = array(
-    				'parent' => $homePage,
-    				'page_internal_name' => $name,
-    				'set_online' => true,
-    				'hidden_from_nav' => false,
-    				'creator' => self::ADMIN_USERNAME
-    		);
-    		 
-    		$this->pageCreator->createPage($contentPage, $translations, $options);
-    }
-
-
     /**
      * Insert all translations
      */

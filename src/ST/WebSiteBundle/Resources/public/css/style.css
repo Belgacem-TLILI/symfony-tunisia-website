@@ -544,23 +544,23 @@ article .inside {
 }
 /* Team and Contact */
 
-section#team, section#contact {
+section#speakers, section#contact {
 	color: #e4e5e2;
 	background:#312A1E;
 }
-section#team .align, section#contact .align {
+section#speakers .align, section#contact .align {
 	font-size: 6em;
 	text-align: center;
 }
-#team h1, #contact h1 {
+#speakers h1, #contact h1 {
 	font-size: 3em;
 	margin-bottom: 1em;
 	margin-top: 0.5em;
 }
-#contact, #team {
+#contact, #speakers {
 	padding-top: 4.75em;
 }
-#team {
+#speakers {
 	padding-bottom: 0;
 }
 #contact {
@@ -568,19 +568,19 @@ section#team .align, section#contact .align {
 }
 /* team */
 
-#team h3 {
+#speakers h3 {
 	font-size: 26px;
 	margin-top: 24px;
 	margin-bottom: 0px;
 }
-#team h3, .job-position {
+#speakers h3, .job-position {
 	text-align: center;
 }
-#team .featurette {
+#speakers .featurette {
 	text-align: center;
 	font-size: 21px;
 }
-#team h2.featurette-heading {
+#speakers h2.featurette-heading {
 	margin-bottom: 24px;
 }
 .teamalign {
@@ -920,7 +920,7 @@ footer p {
  .container {
 1px solid yellow;
 }
- #team .team-thumb {
+ #speakers .team-thumb {
  margin-right: auto;
  margin-left: auto;
  width: 150px;
@@ -1013,7 +1013,7 @@ footer p {
 	
 		/* team */
 		
-		#team .team-thumb {
+		#speakers .team-thumb {
  margin-right: auto;
  margin-left: auto;
  width: 150px;
